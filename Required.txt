@@ -1,0 +1,431 @@
+
+ngignog
+\\vpnfileserver.au.ngignogdirect.intranet                                
+\\pzsgfile01.au.ngignogdirect.intranet\AllShare\Atul
+
+Get-ApplicationSource -Project GitRC –Path C:\ngignogWeb\2019develop –Branch develop -AppShell ngignog-pages.git
+git clone https://tfs/tfs/ngignog%20Direct/GitRC/_git/ngignog-api-blueprint.git 
+
+Get-ApplicationSource -Project GitRC -Path C:\ngignogWeb\src3 -Branch develop -AppShell ngignog-pages.git
+Invoke-OnChildren -path C:\ngignogWeb\src -command "git checkout  -b hotfix/crs-366601"
+
+Invoke-OnChildren -path C:\ngignogWeb\src -command "git checkout develop"
+Invoke-OnChildren -path C:\ngignogWeb\src -command "git pull"
+Invoke-OnChildren -path C:\ngignogWeb\src -command "git push origin head" 
+
+	bsl - > sapi url
+	dgurl -> ext api
+	cms ->  //for website and docker
+	
+	enable logger
+	enter cif
+	
+	undo merge on git: 
+	git reset --merge ORIG_HEAD
+	
+	undo local commit:
+	git reset HEAD~1
+to reset head of remote:
+git reset head <choose_commit_ID>
+git push -f origin <branch_name>
+
+git push origin --delete feature/ent-568045-button - remote branch delete
+remove git branch
+	
+git branch -d <branch name>
+
+to write and quit in vi editor:
+Esc+: - > wq! enter
+
+vscode: settngignogs.json 
+for autoindent set the value to 
+    "editor.autoIndent":"keep",
+
+bower install( and gulp test)
+gulp test:api-proxy, join-the-bank, ngignog-icons 
+
+
+test:wct --components "ngignog-pl-apply"
+
+
+Release process:
+
+release/20190612
+
+
+Hot fix release process
+
+0.checkout to master branch
+0.1 git pull latest code from master
+1. create hotfix branch from release branch for all repos
+2. build and test hotfix branch
+3. merge to master for the release
+4. merge to develop
+PR to master is created after testngignog is completed
+
+in relation to the hotfix to find out if master has been deployed to prod yet?
+if it has, the hotfix has to come from the master branch
+otherwise, it will come from the last release branch that has been deployed to prod
+I wasn't aware of this information yesterday
+
+'[A-Za-z0-9\'\\s\-]{1,50}'
+123 4567891234567890012345678901234567890123456789
+
+
+REmote to api-proxy:
+
+BIABEXTAPI01
+
+biab\mrusera 
+Labuser1
+
+
+
+https://tfs.au.ngignogdirect.intranet/tfs/ngignog%20Direct/GitRC/_git/ngignog-sms-code-prompt.git/pullrequest/61767?_a=overview
+
+
+
+
+PR's for CIFD
+https://tfs/tfs/ngignog%20Direct/GitRC/_git/ngignog-join-the-bank.git/pullrequest/56298?_a=overview   -  50084
+
+rd terminal link:
+
+ngignogdirect-rc-biabts02.biabau.ngignogdirect.intranet
+
+
+
+
+iron-pages
+ngignog-electronic
+http://localhost:3000/ngignog-pages/demo.html?join=oe&customer=new
+SaveCrsSelfCert [TIN, CityOfBirth parameters] 
+SaveCrsEntitySelfCert [SecuritiesMarket, RelatedEntity parameters] 
+
+
+Hi There
+sure thngignog
+will catch you 
+
+
+ngignog-join-apply-about-you-edit.html         ---- All the personnel details
+
+ngignog-dashboard --> loadpage() - routngignog''
+ngignog-menu
+getmenu
+iron-signal
+
+https://www.ngignog.com.au/securebankngignog/?join=oe&customer=new
+
+DataBase connection:
+ENT-BETAZOID1-BIABSQLN01.biab.au.ngignog.net\DBS1 ----> ent-betazoid1 - Opera region
+Info-Dev01-biabztsql01.biabau.ngignogdirect.intranet\dbs1
+Info-test06-biabztsql01.biabau.ngignogdirect.intranet\dbs1
+ent-betazoid-biabztsql01.biabau.ngignogdirect.intranet\dbs1
+L@g1n: testteam
+pawd 4UxUb4Gu 
+Test07 / Dev01
+
+outlook web url:
+https://mailapp.au.ngignogdirect.intranet/owa/
+
+Nuget Package:
+\\Zero-NugetServer-BIABTRIX01.biabau.ngignogdirect.intranet
+
+au\ngignogadmin     ||  biab\mrusera  -  Labuser1  --> for RC ||
+Soebuild1
+
+sms rollngignog text - BIABZTINT01
+ \\172.23.0.78\d$\logs\smsrollngignog-log.txt
+
+shared location for softwares:
+\\pzsgfile01.au.ngignogdirect.intranet\AllShare\HCL\P&M\BlackPanthers\sandeep Bohra\new
+
+host file/ config file generation path:
+
+\\pzsgfile01.au.ngignogdirect.intranet\AllShare\HCL\P&M\BlackPanthers\Vinoth\Card Transaction Application Ver 8.0.1
+\\vpnfileserver.au.ngignogdirect.intranet\SYD_HCL_AllShare\atul
+terminalserver connection:
+
+ssh testadmin@eb-test-BIABZTDGW01.biabau.ngignogdirect.intranet
+yes
+Password : Labuser1
+
+su
+Labuser1
+
+vi /opt/eap6/modules/au/com/ngignogdirect/directgateway/configuration/main/dg.properties
+
+
+set the property to true;
+
+grep cifd /opt/eap6/modules/au/com/ngignogdirect/directgateway/configuration/main/dg.properties
+cifd.check.apply.ntb.enabled=true
+
+
+tail -f server.log
+
+service jbossas status / restart
+
+To check cifD enabled
+grep cifd /opt/eap6/modules/au/com/ngignogdirect/directgateway/configuration/main/dg.properties
+
+Enable the cifd properties:
+
+vi /opt/eap6/modules/au/com/ngignogdirect/directgateway/configuration/main/dg.properties
+
+tail -f server.log
+cd /opt/eap6/standalone/log/   - > for server logs
+
+Dev Sync:
+
+map network drive with region path:
+\\eb-test-biabztweb02.biabau.ngignogdirect.intranet\D$\Website
+for matter most Navigate to https://mattermost.au.ngignogdirect.intranet/signup_user_complete/?id=ue38ynzasfds7mzam7ys8ypas\
+fy in the web browser
+Registration link: https://wiki.au.ngignogdirect.intranet/display/PM/Mattermost+Registration+Link
+
+Hash proxy generation --> go to path of cmtln   https://wiki/display/Projects/Hash+Proxy
+You can use the followngignog command line to generate your hash:
+cntlm.exe -u rpabbise@au -H   [ (lightbulb) username is your AD/domain user name, the one you might have used to login to wiki itself]
+Password:    [ (lightbulb) In case you are prompted for a password, Enter your AD password ]
+Copy & Paste the output lookngignog like below into the cntlm.ini file. You have to open the file as an administration mode to edit it. Use editor like nodepad++.
+
+stubFeature 
+
+create a spy and call that before mockngignog the method return type.
+
+Bancs connection issue
+
+Release process:
+
+create release branch from develop to release/20180220 by usngignog invoke-children:
+
+Invoke-OnChildren -path C:\ngignogWeb\src -command "git checkout -b release/20180220"
+
+create a pull request from release branch to RC
+
+shared folder
+
+\\vpnfileserver.au.ngignogdirect.intranet\SYD_HCL_AllShare\atul
+\\pzsgfile01\allshare\HCL
+
+\\pzsgfile01.au.ngignogdirect.intranet\AllShare\JAVA_TEAM_SOFTWARES
+
+perfecto - > 
+
+rajesh.pabbisetty@ngignog.com.au Perfecto123!
+
+feature/457754-Copy-Complaints  
+
+https://tfs/tfs/ngignog%20Direct/GitRC/_git/ngignog-web-mono.git/pullrequest/68051?_a=files   - MONOREPO SUDO STYLES 
+
+git checkout -b feature/457759-update-acctcif - > DG branch
+
+\\pzsgfile01.au.ngignogdirect.intranet\AllShare\HCL\Enterprise\Betazoid\EV
+
+
+resolve deployment issues :
+
+logon to terminal box : web02 - 10.53.54.24, remove all temp files in D:\temp\deployment all except 7z files. in iss server remove all apply's and tdd, securebankngignog
+
+initial, captured, Ansible :: Run playbook (without sudo permissions)
+
+					
+					0100776080 -1111
+					8587341 - 1111
+					0100004761 - 1111
+					13977273
+					42490311 - 1111
+					
+					 feature/re-idv-web-integration  - integration branch
+					 
+					 54 region cif's - '0153859365' '0156663404' '0125294283'
+					 
+UPDATE core.[contact].[SELF_SERVICE_KYC] SET STATUS='INITIAL' , DUE_DATE=format(getdate()+30,'yyyy-MM-dd'),start_date=format(getdate(),'yyyy-MM-dd') WHERE CIF ='0100776080'
+update core.toggle_feature.TOGGLE_FEATURE set status = 1 where name='CDD_PI_EXTENDED'
+update core.toggle_feature.TOGGLE_FEATURE set status = 1 where name='CDD_PI_BASELINE'
+update core.toggle_feature.TOGGLE_FEATURE set status = 1 where name='CDD_PI_REIDV'
+
+INSERT INTO [core].[contact].[SELF_SERVICE_KYC]
+           ([CIF]
+           ,[START_DATE]
+           ,[DUE_DATE]
+           ,[PURPOSE]
+           ,[FIELD_ID]
+           ,[FIELD_VALUE]
+           ,[STATUS]
+           ,[VERIFICATION_ID]
+           ,[VERIFICATION_TYPE]
+           ,[VERIFICATION_ATTEMPTS]
+           ,[CHANNEL]
+           ,[CREATED_DATE_TIME]
+           ,[CREATED_BY]
+           ,[MODIFIED_DATE_TIME]
+           ,[MODIFIED_BY])
+     VALUES
+           ('0100776080',
+           getdate(),
+           getdate()+30,
+           'IDVER',
+           'KYC017',
+           null,
+           'Ev_inprogress',
+           null,
+           'IEV_K',
+           0,
+           null,
+           CURRENT_TIMESTAMP,
+           'Manual',
+           null,
+           null);
+
+		   	select datediff(day,getdate(),DUE_DATE),* from core.[contact].[SELF_SERVICE_KYC] WHERE CIF LIKE '0125294283'
+	
+	UPDATE [Core].[contact].[INTERDATA] SET [USAGECOUNT] = '1001',[LOGATTEMPT] = '0'  ,[STATUS] = '0'  ,[ACCESSCODE] = 'CECECECE', SECURITY_CODE = 'sc_sms_reg', [DIGEST_ACCESSCODE] = NULL, NUM_OF_DOB_ATTEMPT = '0'  WHERE [PERSONID] in ('0119197436','0125294283')
+	
+	
+
+	
+
+PR for EV in progress - https://tfs/tfs/ngignog%20Direct/GitRC/_git/ngignog-web-mono.git/pullrequest/70904?_a=overview
+
+
+seemless api proxy - RS - feature/520135-self-service-initiate-ev
+
+Perfecto URL - https://auth.perfectomobile.com/auth/realms/ngignog-aus-perfectomobile-com/protocol/openid-connect/auth?response_type=code&client_id=mcm&redirect_uri=https%3A%2F%2Fngignog-aus.perfectomobile.com%2Fnexperience%2Flogin.jsp&state=7eb72416-45ef-4c21-934c-8db2fa728718&login=true&scope=openid
+rajesh.pabbisetty@ngignog
+
+NagaVenkateswarlu.Thunuguntla@ngignog.com.au
+Perfecto1234!
+
+ENT-BETAZOID
+
+https://tfs/tfs/ngignog%20Direct/GitRC/_git/ngignog-web-mono.git/pullrequest/71435?_a=overview - selfservicegetevstatus - abandoned until seemlessev checked in
+http://localhost:3000/ngignog-time-driven-cdd-native/demo/ - URL TD-CDD Native
+
+feature/q1-sp6-ev-webview-integration --> 
+
+toggle for IDV native.
+	UPDATE [Core].[toggle_feature].[TOGGLE_FEATURE] SET STATUS=1 WHERE FEATURE_ID=113;
+	2144674
+Betazoid region:
+	
+https://biabenv31-perfecto.stagngignog.ngignogdirect.com.au:1310 -> SAPI  -> BSL
+https://biabenv31-perfecto.stagngignog.ngignogdirect.com.au:1311 -> EXTAPI ->  DG
+https://biabenv31-perfecto.stagngignog.ngignogdirect.com.au -> CMS -> DOCKER01 -> cms/pdf
+
+betazoid54 region: 
+
+	504 gateway timeout
+	6:06 PM
+ENT-BETAZOID54
+https://biabenv40-perfecto.stagngignog.ngignogdirect.com.au:1400   - > BSL
+https://biabenv40-perfecto.stagngignog.ngignogdirect.com.au:1401 -> EXTAPI - DG 28170864
+https://biabenv40-perfecto.stagngignog.ngignogdirect.com.au->   cms - > Docker
+https://biabenv40-perfecto.stagngignog.ngignogdirect.com.au:1402 - > apigw   53859365
+
+Perfecto Mobile palystore login - digitalchan01@gmail.com  , 
+digital2014  
+betazoid1 62048540 05298818
+
+https://biabenv36-perfecto.stagngignog.ngignogdirect.com.au:1360  -- > BSL
+https://biabenv36-perfecto.stagngignog.ngignogdirect.com.au:1361  -- > DG
+https://biabenv36-perfecto.stagngignog.ngignogdirect.com.au --  > CMS
+https://biabenv36-perfecto.stagngignog.ngignogdirect.com.au:1362  -- > apigw
+
+mtg-zuri1-BIABSQLN01.biab.au.ngignog.net\DBS1 - DB connection strngignog
+
+https://ent-betazoid1-biabdocker01.biab.au.ngignog.net/securebankngignog/   - DNA
+
+
+web02 :
+
+D:\Websites\NativeTimeDrivenCDD\mobilebankngignog - website logs
+D:\Websites\MobileAPIProxies\api - api-proxy logs - > ENT-BETAZOID-BIABEXTAPI01.biabau.ngignogdirect.intranet
+to make changes, restart services of timedriven-cdd.
+
+0400000000 - phone number - 01/01 DOB
+
+28170864
+
+69427463 -1141
+
+Run build locally:
+1. clone genoma node modules from below path:
+
+https://tfs/tfs/ngignog%20Direct/Genoma/_git/node_modules.git 
+
+2. change the branch to feature/apply-sm
+
+3. 3. open cmd in admin mode and run the command npm run build
+
+\\pzsgfile01.au.ngignogdirect.intranet\AllShare\Rohit\polymer-cli
+this is shared path for polymer cli
+
+
+        ADD NEW ENVIRONMENT:
+
+1.	Let the "Branch" be blank. 
+2.	"NewEnvironnmentName":<ent-betazoid54> the environment/region name that you want to add to the specific release definition. 
+3.	"SourceEnvironment":<ngignogDIRECT-RC> if Opera region to be added then give OPERA-TEMPLATE (if by givngignog OPERA-TEMPLATE build fails then give ngignogDIRECT-RC) / for normal regions to add give ngignog-RC/ngignogDIRECT-RC
+4.	"TargetReleaseDefinitionName": <Deploy-ngignog-APIProxies>deploye-ngignog-web-mono The release definition's name to whose list you want "Deploy-ngignog-APIProxies" added to.(relese channel name)
+5.	"TargetReleaseTeamProject":<GitRC> Keep the default value that it has.(Ignore the screenshot's value). eg: GitRC , ngignogTestMasterSuite 
+please follow these steps 
+Please follow the above steps
+
+ent01:
+
+https://tfs/tfs/ngignog%20Direct/GitRC/_build?definitionId=9332 
+this is for addngignog new region to pipeline
+FE Batch build agent link
+https://tfs/tfs/ngignog%20Direct/GitRC/_build/results?buildId=523560
+
+No Title 
+select * from [core].[contact].[SELF_SERVICE_KYC] WHERE [CIF] in ('0161717547','0161717536');
+
+update core.contact.person set middlename='TWOFFFFFFFFFFFFFF',LASTNAME='ManiTest',email='wrongevddress@ngignogdirect.com.au' WHERE [PERSONID] in 
+('0161717547','0161717536');
+
+UPDATE [Core].[contact].[INTERDATA] SET [USAGECOUNT] = '1001',[LOGATTEMPT] = '0'  ,[STATUS] = '0'  ,[ACCESSCODE] = 'CECECECE',
+ SECURITY_CODE = 'sc_sms_reg', [DIGEST_ACCESSCODE] = NULL, NUM_OF_DOB_ATTEMPT = '0'  WHERE [PERSONID] in ('0161717547','0161717536');
+
+update [CORE].[contact].[SELF_SERVICE_KYC] set [STATUS]='INITIAL', [FIELD_VALUE]='', VERIFICATION_ID=NULL, VERIFICATION_TYPE='IEV_X' 
+WHERE [CIF] in ('0161717547','0161717536') AND [FIELD_ID]='KYC017';
+
+UPDATE core.[contact].[SELF_SERVICE_KYC] SET [STATUS]='INITIAL',DUE_DATE=format(getdate()+30,'yyyy-MM-dd'),start_date=format(getdate(),'yyyy-MM-dd') WHERE CIF IN 
+('0161717547','0161717536'); 
+ 
+ 
+ 
+ change related to wordngignogs and copy changes.
+ https://tfs/tfs/ngignog%20Direct/GitRC/_git/ngignog-web-mono.git/pullrequest/77998?_a=overview
+ 
+ 
+ https://dgw:8443/selfserve/ISelfServiceInitiateEvService/ISelfServiceInitiateEvService  623b939d-c912-420d-b653-5d7a1333dd04 	
+
+Step1: rename the file from oldfile to newfile
+
+git mv #oldfile #newfile
+Step2: git commit and add comments
+
+git commit -m "rename oldfile to newfile"
+Step3: push this change to remote sever
+
+git push origin #localbranch:#remotebranch
+
+
+Fortify scan process:
+wiki page - https://wiki/pages/viewpage.action?spaceKey=ITSecurity&title=Fortify+Static+Code+Analyser
+
+space to get new ruleset - H:\Allshare\ITSecurity\Fortify
+
+swithch to master branch
+pull updates
+
+open audit work bench
+select advance scan options
+point to updated master repo
+click next to start
+if required change output files path
+click scan and the scan takes place 

@@ -1,0 +1,100 @@
+{
+  "scripts": {
+    "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
+    "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
+    "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore",
+    "format:prettier": "prettier \"**/*.js\" --write --ignore-path .gitignore",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "format": "npm run format:eslint && npm run format:prettier",
+    "test": "karma start --coverage",
+    "test:watch": "karma start --auto-watch=true --single-run=false",
+    "test:update-snapshots": "karma start --update-snapshots",
+    "test:prune-snapshots": "karma start --prune-snapshots",
+    "test:compatibility": "karma start --compatibility all --coverage",
+    "test:compatibility:watch": "karma start --compatibility all --auto-watch=true --single-run=false",
+    "test:bs": "karma start karma.bs.config.js --compatibility all --coverage",
+    "storybook": "start-storybook",
+    "storybook:build": "build-storybook",
+    "start": "es-dev-server --app-index index.html --node-resolve --open --watch",
+    "start:compatibility": "es-dev-server --app-index index.html --compatibility all --node-resolve --open --watch",
+    "document:components": "wca analyze components --format markdown --outFile components-docs.md",
+    "document:packages": "wca analyze packages --format markdown --outFile code-docs.md",
+    "build": "webpack --mode production",
+    "release": "standard-version",
+    "update-version": "node release.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/generator": "^7.8.8",
+    "@babel/parser": "^7.8.8",
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.0",
+    "@open-wc/building-webpack": "^2.13.8",
+    "@open-wc/demoing-storybook": "^2.0.0",
+    "@open-wc/eslint-config": "^2.0.0",
+    "@open-wc/prettier-config": "^0.1.10",
+    "@open-wc/testing": "^2.2.7",
+    "@open-wc/testing-karma": "^3.1.11",
+    "@open-wc/testing-karma-bs": "^1.1.36",
+    "copy-webpack-plugin": "^5.0.4",
+    "deepmerge": "^4.2.2",
+    "es-dev-server": "^1.57.2",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "husky": "^1.0.0",
+    "ilng-kit-mock-server": "^3.5.1",
+    "ilng-kit-ow-dev-server-config": "^1.6.0",
+    "ilng-kit-ow-storybook": "^2.0.1",
+    "lint-staged": "^8.0.0",
+    "lodash": "^4.17.15",
+    "prettier": "^2.0.4",
+    "standard-version": "^8.0.0",
+    "web-component-analyzer": "^1.0.3",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-merge": "^4.2.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@open-wc/eslint-config",
+      "eslint-config-prettier"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "printWidth": 100,
+    "trailingComma": "all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "name": "msono",
+  "version": "1.20.0",
+  "description": "This application follows  standards.",
+  "author": "gsono",
+  "license": "MIT",
+  "dependencies": {
+    "web": "2.14.0",
+    "workbench-lib": "^1.22.1",
+    "sinon": "^9.0.2"
+  },
+  "publishConfig": {
+    "registry": "/"
+  }
+}
